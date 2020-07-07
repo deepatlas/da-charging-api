@@ -120,6 +120,7 @@ def init_stations(
 
 
 def start_api(
+    fastapi_instance: Optional[FastAPI] = None,
     db_config: Optional[Dict] = None,
     connector_config: Optional[Dict] = None,
     host: Optional[str] = None,
@@ -140,8 +141,10 @@ def start_api(
         Db_Config.engine_string, connect_args=Db_Config.connect_args
     )
     engine.connect()
+    if fastapi_instance is None:
+        fastapi_instance = app
     uvicorn.run(
-        app,
+        fastapi_instance,
         host=host if host is not None else "0.0.0.0",
         port=port if port is not None else 8080,
     )
