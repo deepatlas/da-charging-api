@@ -1,0 +1,35 @@
+{
+  "id": "e30fcfcd077529ef0d39bbf2938b4508ed7986218dc11953408e6b1bdb8f21bdb282a98c822d3c837ff04186b84f6ce1d20c0b7a3f82266ad17e6383db7269be",
+  "data_source": "TEST",
+  "address": {
+    "station_id": "e30fcfcd077529ef0d39bbf2938b4508ed7986218dc11953408e6b1bdb8f21bdb282a98c822d3c837ff04186b84f6ce1d20c0b7a3f82266ad17e6383db7269be",
+    "street": null,
+    "town": null,
+    "postcode": null,
+    "district": null,
+    "state": null,
+    "country": "DE"
+  },
+  "charging": {
+    "station_id": "e30fcfcd077529ef0d39bbf2938b4508ed7986218dc11953408e6b1bdb8f21bdb282a98c822d3c837ff04186b84f6ce1d20c0b7a3f82266ad17e6383db7269be",
+    "capacity": 2,
+    "kw_list": [],
+    "ampere_list": [
+      32.0
+    ],
+    "volt_list": [
+      400.0
+    ],
+    "socket_type_list": [
+      "type2"
+    ],
+    "dc_support": false,
+    "total_kw": null,
+    "max_kw": null
+  },
+  "operator": "EnBW AG",
+  "payment": "enbw_elektronautenkarte:yes",
+  "authentication": "membership_card:yes",
+  "coordinates": "POINT(8.4310523 49.0211913)",
+  "raw_data": "{\"id\": 25397898, \"lat\": 49.0211913, \"lon\": 8.4310523, \"tags\": {\"amenity\": \"charging_station\", \"amperage\": \"32\", \"authentication:membership_card\": \"yes\", \"bicycle\": \"no\", \"capacity\": \"2\", \"car\": \"yes\", \"fee\": \"yes\", \"note\": \"maximale Leistung laut Aufschrift 22 kW, das m\\u00fcsste Drehstrom mit 400 V und 32 A entsprechen\", \"old_ref\": \"1059\", \"opening_hours\": \"24/7\", \"operator\": \"EnBW AG\", \"payment:enbw_elektronautenkarte\": \"yes\", \"ref\": \"2039\", \"scooter\": \"no\", \"socket:type2\": \"2\", \"voltage\": \"400\"}, \"type\": \"node\"}"
+}

@@ -1,0 +1,3 @@
+[submodule "src/da-charging-connectors"]
+	path = src/da-charging-connectors
+	url = https://github.com/deepatlas/da-charging-connectors.git

@@ -1,0 +1,36 @@
+{
+  "id": "d1e57e83ef0fa4527344f2375cd6ea9bca8bb405fa31c67a8e68224db2c6635a37a3bd0a4e3acf3ec1898a2a97adf941caa7d757ab276b5b3c9f5d2239a5286f",
+  "data_source": "TEST",
+  "address": {
+    "station_id": "d1e57e83ef0fa4527344f2375cd6ea9bca8bb405fa31c67a8e68224db2c6635a37a3bd0a4e3acf3ec1898a2a97adf941caa7d757ab276b5b3c9f5d2239a5286f",
+    "street": "Ammonstraße 72",
+    "town": "Dresden",
+    "postcode": "01067",
+    "district": null,
+    "state": "Sachsen",
+    "country": "DE"
+  },
+  "charging": {
+    "station_id": "d1e57e83ef0fa4527344f2375cd6ea9bca8bb405fa31c67a8e68224db2c6635a37a3bd0a4e3acf3ec1898a2a97adf941caa7d757ab276b5b3c9f5d2239a5286f",
+    "capacity": 2,
+    "kw_list": [
+      150,
+      22
+    ],
+    "ampere_list": null,
+    "volt_list": null,
+    "socket_type_list": [
+      "DC Kupplung Combo",
+      " DC CHAdeMO",
+      "AC Steckdose Typ 2"
+    ],
+    "dc_support": true,
+    "total_kw": 175,
+    "max_kw": 150
+  },
+  "operator": "DREWAG Stadtwerke Dresden GmbH",
+  "payment": null,
+  "authentication": null,
+  "coordinates": "POINT(13.72148 51.048719)",
+  "raw_data": "{\"Adresse\": \"Ammonstra\\u00dfe 72\", \"Anschlussleistung [kW]\": 175, \"Anzahl Ladepunkte\": 2, \"Art der Ladeeinrichtung\": \"Schnellladeeinrichtung\", \"Betreiber\": \"DREWAG Stadtwerke Dresden GmbH\", \"Breitengrad [DG]\": 51.048719, \"Bundesland\": \"Sachsen\", \"Inbetriebnahmedatum\": {\"_isoformat\": \"2019-11-26T00:00:00\"}, \"L\\u00e4ngengrad [DG]\": 13.72148, \"P1 [kW]\": 150, \"P2 [kW]\": 22, \"P3 [kW]\": NaN, \"P4 [kW]\": NaN, \"Postleitzahl Ort\": \"01067 Dresden\", \"Public Key1\": NaN, \"Public Key2\": NaN, \"Public Key3\": NaN, \"Public Key4\": NaN, \"Steckertypen1\": \"DC Kupplung Combo, DC CHAdeMO\", \"Steckertypen2\": \"AC Steckdose Typ 2\", \"Steckertypen3\": NaN, \"Steckertypen4\": NaN}"
+}

@@ -1,0 +1,2 @@
+FROM kartoza/postgis:12.0
+COPY setup_db.sql /docker-entrypoint-initdb.d/setup_db.sql
