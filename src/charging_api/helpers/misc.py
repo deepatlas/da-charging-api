@@ -1,7 +1,7 @@
 from typing import Dict
 
 
-def _update_configs(to_obj, from_dict):
+def _update_config(to_obj, from_dict):
     for k, v in from_dict.items():
         if isinstance(v, Dict):
             current_value = getattr(to_obj, k)

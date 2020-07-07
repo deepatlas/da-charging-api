@@ -11,7 +11,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.status import HTTP_401_UNAUTHORIZED
 from sqlalchemy.orm import Session, sessionmaker
 from charging_stations.connectors import _config as Connector_Config
-from ..helpers.misc import _update_configs
+from ..helpers.misc import _update_config
 from ..models._rest_models import RestStation
 from ..helpers import get_logger
 from . import _config as Db_Config, _crud as Crud
@@ -126,7 +126,7 @@ def start_api(
     port: Optional[int] = None,
 ):
     if db_config is not None:
-        _update_configs(Db_Config, db_config)
+        _update_config(Db_Config, db_config)
         Db_Config.schema = Db_Config.DB_CONFIG.get("schema")
         Db_Config.engine_string = f"postgresql://{Db_Config.DB_CONFIG['user']}:{Db_Config.DB_CONFIG['password']}@{Db_Config.DB_CONFIG['host']}:{Db_Config.DB_CONFIG['port']}/{Db_Config.DB_CONFIG['database']}"
         Db_Config.connect_args = (
@@ -135,8 +135,7 @@ def start_api(
             else None
         )
     if connector_config is not None:
-        for k, v in connector_config.items():
-            setattr(Connector_Config, k, v)
+        _update_config(Connector_Config, connector_config)
     engine: Engine = create_engine(
         Db_Config.engine_string, connect_args=Db_Config.connect_args
     )
