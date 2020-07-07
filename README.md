@@ -20,13 +20,13 @@ You can furhtermore specify a [db_config](src/charging_api/server/_config.py) an
 ### Docker
 You can build docker containers for the API and the database:
 ```bash
-docker build -t da-charging-data_db -f Dockerfile.db . 
-docker build -t da-charging-data_rest -f Dockerfile.rest . 
+docker build -t charging_api-db -f Dockerfile.db . 
+docker build -t charging_api-rest -f Dockerfile.rest . 
 ```
 Run containers as follows:
 ```bash
-docker run -p 5432:5432 --detach da-charging-data_db
-docker run -p 5432:5432 --detach da-charging-data_rest
+docker run -p 5432:5432 --detach charging_api-db
+docker run -p 5432:5432 --detach charging_api-rest
 ```
 
 ### Docker-Compose
