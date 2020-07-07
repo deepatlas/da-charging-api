@@ -50,7 +50,9 @@ class RestStation(BaseModel, RestMixin):
         if isinstance(id, str):
             id = id.encode("utf8")
         if not isinstance(id, bytes):
-            raise RuntimeError(f"id: {id} (type: {type(id)}) is not of type bytes! Could not convert to bytes!")
+            raise RuntimeError(
+                f"id: {id} (type: {type(id)}) is not of type bytes! Could not convert to bytes!"
+            )
         address = v.get("address")
         if isinstance(address, Dict):
             v["address"] = RestAddress(**address)
