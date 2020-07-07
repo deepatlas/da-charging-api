@@ -7,8 +7,8 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.orm.scoping import ScopedSession, scoped_session
 from charging_api.models._db_models import DbStation
 from charging_api.models._rest_models import RestStation
-from charging_api.rest_api._config import engine_string, connect_args
-from charging_api.rest_api._crud import (
+from charging_api.api._config import engine_string, connect_args
+from charging_api.api._crud import (
     create,
     delete,
     update,

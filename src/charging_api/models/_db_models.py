@@ -105,7 +105,7 @@ class DbStation(Base, DbMixin):
 
 
 if __name__ == "__main__":
-    # from ..rest_api import Config
+    # from ..api import Config
     # from sqlalchemy import create_engine
     #
     # engine = create_engine(Config.engine_string, connect_args=Config.connect_args)

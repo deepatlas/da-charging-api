@@ -12,7 +12,7 @@ from charging_stations.connectors import (
     OSMConnector,
     Merger,
 )
-from ..rest_api import _config as Db_Config
+from ..api import _config as Db_Config
 from ..helpers import get_logger
 from ..models._rest_models import RestStation, RestAddress, RestCharging
 from ..models._db_models import DbStation

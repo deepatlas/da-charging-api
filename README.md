@@ -16,7 +16,7 @@ db_config = {...}
 connector_config = {...}
 start_api(restful_config=db_config, connector_config=connector_config, host="0.0.0.0", port=8080)
 ```
-You can furhtermore specify a [db_config](src/charging_api/rest_api/_config.py) and [connector_config](https://github.com/deepatlas/da-charging-connectors/blob/master/src/charging_stations/connectors/_config.py).
+You can furhtermore specify a [db_config](src/charging_api/api/_config.py) and [connector_config](https://github.com/deepatlas/da-charging-connectors/blob/master/src/charging_stations/connectors/_config.py).
 ### Docker
 You can build docker containers for the API and the database:
 ```bash
