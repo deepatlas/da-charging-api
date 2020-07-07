@@ -11,7 +11,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.status import HTTP_401_UNAUTHORIZED
 from sqlalchemy.orm import Session, sessionmaker
 from charging_stations.connectors import _config as Connector_Config
-from ..helpers.misc import _update_config
+from ..helpers._misc import _update_config
 from ..models._rest_models import RestStation
 from ..helpers import get_logger
 from . import _config as Db_Config, _crud as Crud
