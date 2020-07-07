@@ -1,7 +1,10 @@
+import logging
 import os
 import json
 from charging_api.models._rest_models import RestStation
 from charging_api.models._db_models import DbStation
+
+log = logging.getLogger(os.path.basename(__file__))
 
 
 def _compare_attributes(restStation, dbStation, field=None):

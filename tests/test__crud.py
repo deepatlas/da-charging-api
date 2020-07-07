@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from typing import List
 from sqlalchemy import create_engine
@@ -15,6 +16,8 @@ from charging_api.rest_api._crud import (
     _delete_all,
     _init_stations,
 )
+
+log = logging.getLogger(os.path.basename(__file__))
 
 
 class TestCrud:
