@@ -9,7 +9,7 @@ pip install git+https://github.com/deepatlas/da-charging-api.git
 ```
 ## Usage
 ### Python3
-If you can start the api server calling the following snippet.
+You can start the api server with the following snippet:
 ```bash
 from charging_api import start_api
 db_config = {...}
