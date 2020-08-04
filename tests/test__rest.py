@@ -1,3 +1,5 @@
+import logging
+import os
 from typing import Optional, Dict
 from fastapi.testclient import TestClient
 from requests import Response
@@ -5,8 +7,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.orm.scoping import ScopedSession
 from starlette.status import HTTP_200_OK, HTTP_202_ACCEPTED
-from charging_api.server._config import engine_string, connect_args
-from charging_api.server._rest import app, get_session
+from charging_api.api._config import engine_string, connect_args
+from charging_api.api._rest import app, get_session
+
+log = logging.getLogger(os.path.basename(__file__))
+
 
 engine = create_engine(engine_string, connect_args=connect_args)
 engine.connect()

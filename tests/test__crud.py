@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from typing import List
 from sqlalchemy import create_engine
@@ -6,8 +7,8 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.orm.scoping import ScopedSession, scoped_session
 from charging_api.models._db_models import DbStation
 from charging_api.models._rest_models import RestStation
-from charging_api.server._config import engine_string, connect_args
-from charging_api.server._crud import (
+from charging_api.api._config import engine_string, connect_args
+from charging_api.api._crud import (
     create,
     delete,
     update,
@@ -15,6 +16,8 @@ from charging_api.server._crud import (
     _delete_all,
     _init_stations,
 )
+
+log = logging.getLogger(os.path.basename(__file__))
 
 
 class TestCrud:
