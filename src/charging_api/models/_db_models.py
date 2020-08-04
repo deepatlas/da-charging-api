@@ -11,7 +11,7 @@ from sqlalchemy import (
     Binary,
 )
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, query_expression
 from geoalchemy2 import Geometry
 from ._mixins import DbMixin
 from ..helpers._logger import get_logger
@@ -74,6 +74,7 @@ class DbStation(Base, DbMixin):
     authentication = Column(String(500))
     coordinates = Column(Geometry("POINT"))
     raw_data = Column(String)
+    distance = query_expression()
 
     address = relationship(
         "DbAddress",
