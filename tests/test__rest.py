@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.orm.scoping import ScopedSession
 from starlette.status import HTTP_200_OK, HTTP_202_ACCEPTED
 from charging_api.api._config import engine_string, connect_args
-from charging_api.api._rest import app, get_session
+from charging_api.api._rest import app, get_session, verify_credentials
 
 log = logging.getLogger(os.path.basename(__file__))
 
@@ -31,6 +31,7 @@ def override_get_db():
 
 
 app.dependency_overrides[get_session] = override_get_db
+app.dependency_overrides[verify_credentials] = lambda _: True
 client = TestClient(app)
 
 
