@@ -74,7 +74,6 @@ class DbStation(Base, DbMixin):
     authentication = Column(String(500))
     coordinates = Column(Geometry("POINT"))
     raw_data = Column(String)
-    distance = query_expression()
 
     address = relationship(
         "DbAddress",
