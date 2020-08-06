@@ -57,5 +57,5 @@ class TestRest:
         assert False
 
     def test_init_stations(self):
-        response: Response = client.get("/api/init-stations")
+        response: Response = client.get("/api/init-stations",params=dict(_=0))
         assert response.status_code == HTTP_202_ACCEPTED
