@@ -1,5 +1,6 @@
 import os
 
+# TODO: turn into class
 
 SECURITY_CREDENTIALS = {
     "user": os.getenv("AUTH_USER", r"admin"),
